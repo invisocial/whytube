@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body>div{
+         margin-top:100px;
+         margin-left:400px;
+      }
+    </style>
+  </head>
+  <body>
+   
+  </body>
+</html>
+<script>
+  const body = document.querySelector('body')
+  function showvideo() {
+    const id = JSON.parse(localStorage.getItem('mediaId'))
+
+    const videodiv = document.createElement('div')
+    videodiv.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    body.append(videodiv)
+  }
+  showvideo()
+</script>

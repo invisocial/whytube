@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Tube</title>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <div id="flexDiv">
+      <div id="nav-left">
+      <img class="logo1"src="https://cdn-icons-png.flaticon.com/512/59/59660.png" alt="">
+		<a href="index.html"><h2 style="color:red;">WhyTube</h2></a>
+      </div>
+     <div id="nav-second">
+          <input   type="text" id="searchTerm" style="font-size: x-large;" placeholder="Search">
+          <button id="searchBtn" onclick="searchVideo()" >SEARCH BUTTON</button>
+      </div> 
+  <div id="last">
+      
+  </div>
+</div>
+ 
+
+   
+<div id="searchResult1">
+  <div id="video-container"></div>
+</div>
+  </body>
+</html>
+<script>
+var input = document.getElementById("searchTerm");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("searchBtn").click();
+  }
+}); 
+</script>
+<script src="search.js"></script>
